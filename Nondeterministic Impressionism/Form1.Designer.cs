@@ -55,6 +55,7 @@
             this.strokeCount = new System.Windows.Forms.Label();
             this.simSettings = new System.Windows.Forms.Label();
             this.similarityLabel = new System.Windows.Forms.Label();
+            this.calculateSimilarityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.referenceBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drawingBox)).BeginInit();
@@ -116,7 +117,8 @@
             this.pausePlayToolStripMenuItem,
             this.drawingModeToolStripMenuItem,
             this.matchingModeToolStripMenuItem,
-            this.colourModeToolStripMenuItem});
+            this.colourModeToolStripMenuItem,
+            this.calculateSimilarityToolStripMenuItem});
             this.simulationToolStripMenuItem.Name = "simulationToolStripMenuItem";
             this.simulationToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.simulationToolStripMenuItem.Text = "Simulation";
@@ -223,6 +225,7 @@
             // uploadInProgress
             // 
             this.uploadInProgress.FileName = "openFileDialog2";
+            this.uploadInProgress.FileOk += new System.ComponentModel.CancelEventHandler(this.uploadInProgress_FileOk);
             // 
             // saveDrawing
             // 
@@ -260,6 +263,13 @@
             this.similarityLabel.Size = new System.Drawing.Size(50, 13);
             this.similarityLabel.TabIndex = 5;
             this.similarityLabel.Text = "Similarity:";
+            // 
+            // calculateSimilarityToolStripMenuItem
+            // 
+            this.calculateSimilarityToolStripMenuItem.Name = "calculateSimilarityToolStripMenuItem";
+            this.calculateSimilarityToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculateSimilarityToolStripMenuItem.Text = "Calculate Similarity";
+            this.calculateSimilarityToolStripMenuItem.Click += new System.EventHandler(this.calculateSimilarityToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -313,6 +323,7 @@
         private System.Windows.Forms.Label strokeCount;
         private System.Windows.Forms.Label simSettings;
         private System.Windows.Forms.Label similarityLabel;
+        private System.Windows.Forms.ToolStripMenuItem calculateSimilarityToolStripMenuItem;
     }
 }
 

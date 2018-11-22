@@ -280,5 +280,25 @@ namespace Nondeterministic_Impressionism
 
             toSave.Save(saveDrawing.FileName + ".png", System.Drawing.Imaging.ImageFormat.Png);
         }
+
+        private void uploadInProgress_FileOk(object sender, CancelEventArgs e)
+        {
+            Bitmap inProgress = (Bitmap)Image.FromFile(uploadInProgress.FileName);
+
+            if (inProgress.Size == reference.Size)
+            {
+                drawing = new List<Bitmap>();
+                drawing.Add(inProgress);
+            }
+        }
+
+        private void calculateSimilarityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            double similarity = compareSections(reference,
+                drawing.ElementAt(drawing.Count - 1),
+                new Point(0, 0), new Point(reference.Width, reference.Height));
+
+            similarityLabel.Text = "Similarity: " + (100 * similarity) + "%";
+        }
     }
 }
