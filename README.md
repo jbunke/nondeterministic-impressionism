@@ -6,7 +6,7 @@ Written in C# in the Visual Studio Community 2017 IDE. All source code in Nondet
 Here is an example reference image and drawing produced with sampling mode, stroke drawing mode, and colour matching.
 
 ## Reference:
-https://i.imgur.com/g46SahS.png
+![Reference](https://i.imgur.com/g46SahS.png)
 
 ## Drawing:
 https://i.imgur.com/NtLaH4o.png
